@@ -1,0 +1,345 @@
+@import "adminstyle.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --background : #8f6cfe;
+    --color : #653ee7;
+}
+/* examination body Div Style */
+.exam_content_inner_div {
+    width: 97%;
+    height: 98%;
+    overflow: hidden;
+    /* background-color: rgb(141, 94, 8); */
+    display: none;
+    grid-template-rows: 10% 8% 72% 10%;
+}
+
+/* examination header Title Div Style */
+.exam_header_title_div {
+    /* background-color: chartreuse; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: var(--color);
+}
+
+/* examination Steps Div Style */
+.steps_div {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps {
+    width: 20%;
+    max-width: 20%;
+    padding: 3px;
+    /* background-color: cornflowerblue; */
+    text-align: center;
+    color: #777;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+    position: relative;
+}
+
+.steps:first-child,
+.steps:last-child
+ {
+    border-radius: 15px 0 0 15px;
+}
+
+/* examination Contents Div Style */
+.exam_contents_div {
+    /* background-color: yellowgreen; */
+    padding: 20px;
+    overflow: auto;
+}
+
+.exam_title_outer_div {
+    /* display: none; */
+    align-items: center;
+}
+
+.exam_contents_div label {
+    font-weight: bold;
+}
+
+.exam_title_input_div input{
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: 1px solid #000;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.exam_date_time_input_div {
+    width: 100%;
+    /* display: flex; */
+    /* background-color: red; */
+}
+
+.exam_date_time_input_div div{
+    width: 50%;
+    /* background-color: yellow; */
+    /* border-left: 2px solid olive;s */
+}
+
+.exam_date_time_input_div input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: 1px solid #000;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.exam_date_time_input_div input[type = date] {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: 1px solid #000;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.exam_date_time_input_div input[type = date]:focus{
+    outline: 1px solid #65037e;
+}
+
+.exam_contents_div input:focus{
+    outline: 1px solid #65037e;
+}
+
+
+/* Guideline form style Start */
+.guideline_form_outer_div {
+    display: none;
+}
+
+.guideline_form_outer_div label {
+    font-weight: bold;
+}
+
+.guideline_form_outer_div input{
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: 1px solid #000;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.guideline_discription_div label {
+   display: block;
+}
+
+.guideline_discription_div textarea {
+    width: 50%;
+    border: none;
+    outline: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+/* Guideline form style End */
+
+/* Basic Instruction Style Start */
+
+.basic_form_outer_div {
+    display: none;
+}
+
+.basic_instruction_input_div label {
+    font-weight: bold;
+}
+
+.basic_form_outer_div input{
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: 1px solid #000;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.basic_form_outer_div label {
+   display: block;
+}
+
+.basic_form_outer_div textarea {
+    width: 50%;
+    border: none;
+    outline: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Basic Instruction Style End */
+
+/* Exam Rules Style Start */
+
+.rules_form_outer_div {
+    display: none;
+}
+
+.rules_form_outer_div label {
+    font-weight: bold;
+}
+
+.rules_form_outer_div input{
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: 1px solid #000;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rules_form_outer_div label {
+   display: block;
+}
+
+.rules_form_outer_div textarea {
+    width: 50%;
+    border: none;
+    outline: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Exam Rules Style End */
+
+/* Exam Extra Attempts Style Start */
+
+.extra_attempt_form_outer_div {
+    display: none;
+}
+
+.extra_attempt_form_outer_div label {
+    font-weight: bold;
+}
+
+.extra_attempt_form_outer_div input{
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: 1px solid #000;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.extra_attempt_form_outer_div label {
+   display: block;
+}
+
+.extra_attempt_form_outer_div textarea {
+    width: 50%;
+    border: none;
+    outline: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Exam Extra Attempts Style End */
+
+
+/* examination Footer Div Style */
+.exam_footer_div {
+    /* background-color: coral; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.next_button_div {
+    margin-right: 50px;
+}
+
+.guideline_btn {
+    display: none;
+}
+
+.instruction_btn{
+    display: none;
+}
+
+.rules_btn{
+    display: none;
+}
+
+.attempts_btn{
+    display: none;
+}
+
+.steps_circle {
+    display: inline-block;
+    width: 25px;
+    height: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    border-radius: 50%;
+    z-index: 1;
+    padding: 5px;
+    /* display: none; */
+    opacity: 0;
+}
+
+.steps_circle::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--color);
+    border-radius: 50%;
+}
+
+
+
+
+

@@ -1,0 +1,110 @@
+@import "adminstyle.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --background : #8f6cfe;
+    --color : #653ee7;
+}
+
+.profile_inner_div {
+    width: 97%;
+    height: 98%;
+    overflow: hidden;
+    /* background-color: rgb(141, 94, 8); */
+    display: none;
+}
+
+.profile_tabs_div {
+    display: flex;
+}
+
+.your_profile_content {
+    width: 500px;
+    height: 400px;
+    /* background-color: #333; */
+    padding: 30px 20px;
+    /* display: none; */
+}
+
+.password_content {
+    width: 480px;
+    height: 400px;
+    /* background-color: #333; */
+    padding: 30px 20px;
+    display: none;
+}
+
+.your_profile,
+.change_password {
+    min-width: 170px;
+    height: 100%;
+    background-color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.your_profile:hover,
+.change_password:hover {
+    background-color: var(--background);
+}
+
+.admin_profile,
+.change_password_div {
+    margin-bottom: 15px;
+}
+
+.admin_profile label {
+    font-size: 16px;
+    display: inline-block;
+    width: 100px;
+}
+
+.change_password_div label {
+    font-size: 16px;
+    display: inline-block;
+    width: 160px;
+}
+
+.admin_profile input[type = text],
+.change_password_div input[type = text] {
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+}
+
+.admin_profile input[type = text]:focus,
+.change_password_div input[type = text]:focus {
+    outline: none;
+}
+
+.admin_profile button,
+.change_password_div button {
+    padding: 7px;
+    cursor: pointer;
+    background-color: var(--color);
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.save_div {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#save_btn {
+    padding: 10px 15px;
+}

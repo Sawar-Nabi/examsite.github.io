@@ -1,0 +1,107 @@
+@import "adminstyle.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --background : #8f6cfe;
+    --color : #653ee7;
+}
+
+.view_exam_outer_div {
+    width: 97%;
+    height: 98%;
+    overflow: hidden;
+    /* background-color: rgb(14.91, 94, 8); */
+    display: none;
+}
+
+/* --------------------------Header Start------------------------------ */
+.view_exam_header {
+    width: 100%;
+    height: 10%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 20px;
+}
+
+.total_exam h3 {
+    letter-spacing: 1px;
+}
+
+.header_actions {
+    display: flex;
+}
+
+.exam_search_div,
+.exam_filter,
+.exam_add_div {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* --------------------------Header End------------------------------ */
+
+/* --------------------------Exam Table Start------------------------ */
+.view_exam_table_div {
+    width: 100%;
+    height: 80%;
+    /* background-color: #bd7b00; */
+    overflow : auto
+}
+
+.view_exam_table_div table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.view_exam_table_div table th, td{
+    padding: 5px 4px;
+}
+
+.view_exam_table_div table tr:first-child{
+   background-color: var(--color); 
+   color: #fff;
+   font-weight: 400;
+   letter-spacing: 1px;
+   pointer-events: none;
+}
+
+.view_exam_table_div table tr:nth-child(even){
+    background-color: #ccc; 
+ }
+
+.view_exam_table_div table .table_action span{
+    margin-left: 5px;
+    cursor: pointer;
+ }
+
+ .view_exam_table_div table .table_action span:hover{
+    color: #000;
+ }
+
+ .view_exam_table_div table tr:hover{
+    background-color: var(--color); 
+    color: #fff;
+ }
+/* --------------------------Exam Table End------------------------ */
+
+/* --------------------------Footer Start------------------------ */
+.view_exam_footer {
+    width: 100%;
+    height: 10%;
+    background-color: #855600;
+}
+/* --------------------------Footer End------------------------ */

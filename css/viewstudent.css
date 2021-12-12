@@ -1,0 +1,179 @@
+@import "adminstyle.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --background : #8f6cfe;
+    --color : #653ee7;
+}
+
+.view_students_outer_div {
+    width: 97%;
+    height: 98%;
+    display: none;
+    /* background-color: rgb(141, 94, 8); */
+}
+
+/* ------------------------------Record Div-------------------------------- */
+.std_view_record_div {
+    width: 100%;
+    height: 10%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.total_std_div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.record_action_btns_div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.record_action_btns_div .search_record_div, .filter_record_div, .std_add_btn{
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.record_action_btns_div span:hover{
+    color: var(--color);
+}
+
+.search_record_div {
+    position: relative !important;
+}
+
+.dropdown_search {
+    position: absolute;
+    width: 180px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    top: 25px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color);
+    overflow : hidden;
+}
+
+.dropdown_search input {
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    background-color: transparent;
+}
+
+.filter_record_div {
+    position: relative;
+}
+
+.filter_div_std {
+    position: absolute;
+    width: 90px;
+    height: auto;
+    padding: 10px;
+    background-color: #dedede;
+    right: 0;
+    top: 20px;
+    text-align: center;
+}
+
+.filter_div_std ul {
+    list-style: none;
+}
+
+.filter_div_std ul li {
+    margin-bottom: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.filter_div_std ul li a  {
+    color: #333;
+}
+
+.filter_div_std ul li a:hover  {
+    color: var(--color)
+}
+/* ---------------------------Std Record Content------------------------- */
+
+.std_view_content_div {
+    width:100%;
+    height: 80%;
+    /* background-color: blueviolet; */
+    overflow: auto;
+}
+
+.std_view_content_div div table {
+    width: 100%;
+    border-collapse: collapse;
+    /* border : 1px solid #467; */
+    font-size: 14px;
+    text-align: center;
+}
+
+.std_view_content_div div table span{
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.std_view_content_div div table span:hover{
+    color: #fff;
+}
+
+.std_view_content_div div table tr:nth-child(even) {
+    background-color: #dedede;
+}
+
+.std_view_content_div div table tr:hover {
+    background-color: var(--background);
+    cursor: pointer;
+}
+
+.std_view_content_div div table td, th {
+    padding: 4px;
+}
+
+.std_view_content_div div table th {
+    pointer-events: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.std_view_content_div div table th {
+    background-color: var(--color);
+}
+
+/* ----------------------------Std View Footer Div--------------------------- */
+
+.std_view_footer_div {
+    width:100%;
+    height: 10%;
+    background-color: rgb(30, 5, 54);
+}
+
+
+
+@media only screen and (max-width: 930px) {
+
+    .std_view_content_div div table {
+        font-size: 12px;
+    } 
+}
