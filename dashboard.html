@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/fontawesomepro.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/dashboardstyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- sidebar HTML start -->
+      <div class="sidebar_container">
+        <div class="logo_outer_div">
+          <div class="logo">
+            <h3>Compix VFX</h3>
+          </div>
+          <span id="menu_btn" onclick="btn1()"
+            ><i class="fad fa-bars"></i
+          ></span>
+          <span id="menu_btn1" onclick="btn2()"
+            ><i class="fad fa-bars"></i
+          ></span>
+          <span id="menu_btn_after_768_hide" onclick="hide_768_btn()"
+            ><i class="fad fa-times"></i
+          ></span>
+        </div>
+        <ul class="sidebar_lists">
+          <li class="dashboard_text_one" onclick="childone()">
+            <a href="#">
+              <span class="items_icon1"
+                ><i class="fad fa-th-large items_icon"></i
+              ></span>
+              <span class="items_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="items_icon1"
+                ><i class="fad fa-users items_icon"></i
+              ></span>
+              <div class="student_outer">
+                <span class="items_name">Students</span>
+                <span class="right_down"
+                  ><i class="fad fa-angle-down"></i
+                ></span>
+                <span class="right_up"><i class="fad fa-angle-up"></i></span>
+              </div>
+            </a>
+          </li>
+          <!-- sub List Start -->
+          <ul class="sidebar_sub_lists">
+            <li>
+              <a href="#" class="register_btn" onclick="reg_btn()"
+                >Register New Student</a
+              >
+            </li>
+            <li>
+              <a href="#" id="view_std_btn">View all Students</a>
+            </li>
+            <li>
+              <a href="#">Import Export Students</a>
+            </li>
+          </ul>
+          <!-- sub List End -->
+          <li>
+            <a href="#">
+              <span class="items_icon1"
+                ><i class="fad fa-university items_icon"></i
+              ></span>
+              <div class="exam_outer">
+                <span class="items_name">Examination</span>
+                <span class="exam_right_down"
+                  ><i class="fad fa-angle-down"></i
+                ></span>
+                <span class="exam_right_up"
+                  ><i class="fad fa-angle-up"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+          <!-- Examination Sub Menu Html Start -->
+
+          <ul class="exam_sub_lists">
+            <li>
+              <a href="#" class="create_exam_btn">Create Exam</a>
+            </li>
+            <li>
+              <a href="#" class="view_exam_btn">View Exam</a>
+            </li>
+          </ul>
+
+          <!-- Examination Sub Menu Html End -->
+          <li class="result_page">
+            <a href="#">
+              <span class="items_icon1"
+                ><i class="fad fa-books items_icon"></i
+              ></span>
+              <span class="items_name">Result</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="items_icon1"><i class="fad fa-bells"></i></span>
+              <span class="items_name">Notification</span>
+            </a>
+          </li>
+          <li class="profile_list">
+            <a href="#">
+              <span class="items_icon1"
+                ><i class="fad fa-user-circle"></i
+              ></span>
+              <div class="profile_outer">
+                <span class="items_name">Profile</span>
+                <span class="profile_right_down"
+                  ><i class="fad fa-angle-down"></i
+                ></span>
+                <span class="profile_right_up"
+                  ><i class="fad fa-angle-up"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+          <ul class="profile_sub_lists">
+            <li>
+              <a href="#" class="sub_profile_btn">Your Profile</a>
+            </li>
+            <li>
+              <a href="#" class="sub_password_btn">Change Password</a>
+            </li>
+            <li>
+              <a href="#" class="sub_logout_btn">Logout</a>
+            </li>
+          </ul>
+        </ul>
+      </div>
+      <!-- sidebar HTML End -->
+
+      <!-- Dashboard Content Html start -->
+      <div class="bashboard_content_Outer_div">
+        <header>
+          <div class="bashboard_header">
+            <div class="dashboard_header_content">
+              <div class="sidebar_after_768">
+                <div class="sidebar_icons_after_768">
+                  <span id="menu_btn_after_768_show"
+                    ><i class="fad fa-bars"></i
+                  ></span>
+                </div>
+                <h1 class="title">Dashboard</h1>
+              </div>
+              <div class="logout_outer_div">
+                <div class="admin_Photo"></div>
+                <p>Bhat Hanan</p>
+                <span class="profile_above_768"
+                  ><i class="fad fa-caret-down"></i
+                ></span>
+                <div id="profile_above_768_div">
+                  <ul>
+                    <li class="above_768_profile"><a href="#">Profile</a></li>
+                    <li class="above_768_chg_pass">
+                      <a href="#">Change Password</a>
+                    </li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_header_border"></div>
+          </div>
+        </header>
+
+        <!-- Middle Div -->
+        <div class="bashboard_content">
+          <div class="dashboard_content_inner_div">
+            <div class="dashboard_students">
+              <span class="dashboard_std_icon"
+                ><i class="fad fa-users items_icon"></i
+              ></span>
+              <h3>Total Students</h3>
+              <h3>582</h3>
+            </div>
+            <div class="dashboard_examination">
+              <span class="dashboard_std_icon"
+                ><i class="fad fa-university items_icon"></i
+              ></span>
+              <h3>Examination</h3>
+              <h3>08</h3>
+            </div>
+            <div class="dashboard_result">
+              <span class="dashboard_std_icon"
+                ><i class="fad fa-books items_icon"></i
+              ></span>
+              <h3>Results</h3>
+              <h3>05</h3>
+            </div>
+            <div class="dashboard_notification">
+              <span class="dashboard_std_icon"
+                ><i class="fad fa-bells"></i
+              ></span>
+              <h3>Notifications</h3>
+              <h3>20</h3>
+            </div>
+          </div>
+
+          <!-- Dashboard Content Html End -->
+
+          <!-- Result Html Start -->
+
+          <div class="result_outer_div" id="result_outers_div">
+            <div class="result_title">
+              <h1>All Results</h1>
+            </div>
+            <div class="result1_inner_div">
+              <div>
+                <span class="dashboard_std_icon"
+                  ><i class="fad fa-poll-people items_icon"></i
+                ></span>
+                <h3>Exam Code : 000101</h3>
+                <h3>Date : 20/07/2021</h3>
+                <h3>Students Attempted : 1719</h3>
+              </div>
+              <div>
+                <span class="dashboard_std_icon"
+                  ><i class="fad fa-poll-people items_icon"></i
+                ></span>
+                <h3>Exam Code : 000101</h3>
+                <h3>Date : 20/07/2021</h3>
+                <h3>Students Attempted : 1719</h3>
+              </div>
+              <div>
+                <span class="dashboard_std_icon"
+                  ><i class="fad fa-poll-people items_icon"></i
+                ></span>
+                <h3>Exam Code : 000101</h3>
+                <h3>Date : 20/07/2021</h3>
+                <h3>Students Attempted : 1719</h3>
+              </div>
+              <div>
+                <span class="dashboard_std_icon"
+                  ><i class="fad fa-poll-people items_icon"></i
+                ></span>
+                <h3>Exam Code : 000101</h3>
+                <h3>Date : 20/07/2021</h3>
+                <h3>Students Attempted : 1719</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Result Html End -->
+
+          <!-- View Result Html Start -->
+
+          <div class="result_contents_div">
+            <div class="result_header_div">
+              <h1>result</h1>
+            </div>
+            <div class="result_table_div">
+              <table>
+                <tr>
+                  <th>#</th>
+                  <th>student name</th>
+                  <th>student ID</th>
+                  <th>percentage</th>
+                  <th>result</th>
+                  <th>action</th>
+                </tr>
+                <tr>
+                  <td>100</td>
+                  <td>muneeb ahmad bhat</td>
+                  <td>std101</td>
+                  <td>95%</td>
+                  <td>pass</td>
+                  <td>
+                    <span><i class="fad fa-eye"></i></span
+                    ><span><i class="fad fa-edit"></i></span
+                    ><span><i class="fad fa-trash-alt"></i></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- View Result Html End -->
+          <!-- Student Content Html Start -->
+
+          <div class="students_content_inner_div">
+            <div class="form_outer_div">
+              <div class="students_header_text">
+                <h3>Students Registration Form</h3>
+              </div>
+              <div class="student_form_div">
+                <form action="">
+                  <fieldset>
+                    <legend>Student Details</legend>
+                    <div class="student_form_inner_div">
+                      <div>
+                        <label for="fname">First Name *</label>
+                        <input type="text" name="fname" id="fname" />
+                      </div>
+                      <div>
+                        <label for="mname">Middle Name</label>
+                        <input type="text" name="mname" id="mname" />
+                      </div>
+                      <div>
+                        <label for="lname">Last Name *</label>
+                        <input type="text" name="lname" id="lname" />
+                      </div>
+                    </div>
+
+                    <div class="student_form_dob_div">
+                      <div>
+                        <label for="fname">Date of Birth </label>
+                        <input type="date" name="fname" id="fname" />
+                      </div>
+
+                      <div>
+                        <label for="mname">Gender</label>
+                        <select name="gender" id="gender">
+                          <option value="Male">Choose</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="student_form_inner_div email_div">
+                      <div>
+                        <label for="fname">Student E-mail</label>
+                        <input type="email" name="fname" id="fname" />
+                      </div>
+                      <div>
+                        <label for="fname">Student Number</label>
+                        <input type="number" name="fname" id="fname" />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend>Father Details</legend>
+                    <div class="student_form_inner_div">
+                      <div>
+                        <label for="fname">First Name *</label>
+                        <input type="text" name="fname" id="fname" />
+                      </div>
+                      <div>
+                        <label for="mname">Middle Name</label>
+                        <input type="text" name="mname" id="mname" />
+                      </div>
+                      <div>
+                        <label for="lname">Last Name *</label>
+                        <input type="text" name="lname" id="lname" />
+                      </div>
+                    </div>
+
+                    <div class="student_form_inner_div email_div">
+                      <div>
+                        <label for="fname">Father E-mail</label>
+                        <input type="email" name="fname" id="fname" />
+                      </div>
+                      <div>
+                        <label for="fname">Father Number</label>
+                        <input type="number" name="fname" id="fname" />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend>Academic Details</legend>
+                    <div class="student_form_inner_div">
+                      <div>
+                        <label for="fname">First Name *</label>
+                        <input type="text" name="fname" id="fname" />
+                      </div>
+                      <div>
+                        <label for="mname">Middle Name</label>
+                        <input type="text" name="mname" id="mname" />
+                      </div>
+                      <div>
+                        <label for="lname">Last Name *</label>
+                        <input type="text" name="lname" id="lname" />
+                      </div>
+                    </div>
+
+                    <div class="student_form_inner_div email_div">
+                      <div>
+                        <label for="fname">Father E-mail</label>
+                        <input type="email" name="fname" id="fname" />
+                      </div>
+                      <div>
+                        <label for="fname">Father Number</label>
+                        <input type="number" name="fname" id="fname" />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <div class="submit_btn">
+                    <input type="submit" name="Submit Form" id="submit" />
+                    <input type="reset" name="Clear Fields" id="submit" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Student Content Html End -->
+
+          <div class="view_students_outer_div">
+            <div class="std_view_record_div">
+              <div class="total_std_div">Total Students : 451</div>
+              <div class="record_action_btns_div">
+                <div class="search_record_div">
+                  <span id="std_search_btn"><i class="fad fa-search"></i></span>
+                  <div class="dropdown_search">
+                    <input type="search" />
+                  </div>
+                </div>
+
+                <div class="filter_record_div">
+                  <span>Filter <i class="fad fa-sort-alt"></i></span>
+                  <div class="filter_div_std">
+                    <ul>
+                      <li><a href="#">Show 10</a></li>
+                      <li><a href="#">Show 15</a></li>
+                      <li><a href="#">Show 20</a></li>
+                      <li><a href="#">Show 25</a></li>
+                      <li><a href="#">Show 30</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="std_add_btn">
+                  <span><i class="fad fa-plus-circle"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="std_view_content_div">
+              <div>
+                <table>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>DOB</th>
+                    <th>E-mail</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Previous Class</th>
+                    <th>Actions</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Sawar Nabi</td>
+                    <td>Ghulam Nabi Dar</td>
+                    <td>12-03-1997</td>
+                    <td>sawrnabi2018@gmail.com</td>
+                    <td>Male</td>
+                    <td>9622656564</td>
+                    <td>12Th</td>
+                    <td>
+                      <span><i class="fad fa-eye"></i></span
+                      ><span><i class="fad fa-edit"></i></span
+                      ><span><i class="fad fa-trash-alt"></i></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Sawar Nabi</td>
+                    <td>Ghulam Nabi Dar</td>
+                    <td>12-03-1997</td>
+                    <td>sawrnabi2018@gmail.com</td>
+                    <td>Male</td>
+                    <td>9622656564</td>
+                    <td>12Th</td>
+                    <td>
+                      <span><i class="fad fa-eye"></i></span
+                      ><span><i class="fad fa-edit"></i></span
+                      ><span><i class="fad fa-trash-alt"></i></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Sawar Nabi</td>
+                    <td>Ghulam Nabi Dar</td>
+                    <td>12-03-1997</td>
+                    <td>sawrnabi2018@gmail.com</td>
+                    <td>Male</td>
+                    <td>9622656564</td>
+                    <td>12Th</td>
+                    <td>
+                      <span><i class="fad fa-eye"></i></span
+                      ><span><i class="fad fa-edit"></i></span
+                      ><span><i class="fad fa-trash-alt"></i></span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="std_view_footer_div"></div>
+          </div>
+
+          <!-- Student Menu Html End -->
+
+          <!-- Examination Content Html Start -->
+
+          <div class="exam_content_inner_div">
+            <!-- exam header Title Html Start -->
+            <div class="exam_header_title_div">
+              <h3>Create Exam</h3>
+            </div>
+            <!-- exam header Title Html End -->
+
+            <!-- exam Steps Div Html start -->
+            <div class="steps_div">
+              <div class="exam_title_step steps">
+                Exam Title<span class="steps_circle title_span"></span>
+              </div>
+              <div class="guideline_step steps">
+                Guidelines<span class="steps_circle guideline_span"></span>
+              </div>
+              <div class="basic_instruction_step steps">
+                Basic Instruction<span class="steps_circle basic_span"></span>
+              </div>
+              <div class="rules_step steps">
+                Rules<span class="steps_circle rules_span"></span>
+              </div>
+              <div class="extra_attempts_step steps">Extra Attempts</div>
+            </div>
+            <!-- exam Steps Div Html End -->
+
+            <!-- exam Contents Div Html start -->
+            <div class="exam_contents_div">
+              <div class="exam_title_outer_div">
+                <!-- Exam Title Form Start -->
+                <form action="">
+                  <div class="exam_title_input_div">
+                    <label for="exam_title">Exam Title</label>
+                    <input type="text" id="exam_title" />
+                  </div>
+                  <div class="exam_date_time_input_div">
+                    <div>
+                      <label for="exam_time">Exam Start Times</label>
+                      <input type="time" id="exam_time" />
+                    </div>
+                    <div>
+                      <label for="exam_duration">Exam Duration</label>
+                      <input type="text" id="exam_duration" />
+                    </div>
+                    <div>
+                      <label for="exam_date">Exam Date</label>
+                      <input type="date" id="exam_date" />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- Exam Title Form  -->
+
+              <div class="guideline_form_outer_div">
+                <!-- Exam Guideline Form End -->
+                <form action="">
+                  <div class="guideline_input_div">
+                    <label for="guideline_title">Guideline Title</label>
+                    <input type="text" id="guideline_title" />
+                  </div>
+                  <div class="guideline_discription_div">
+                    <label for="guideline_discription"
+                      >Guideline Discription</label
+                    >
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </div>
+                </form>
+              </div>
+              <!-- Exam Guideline Form End -->
+
+              <div class="basic_form_outer_div">
+                <!-- Exam Basic Instruction Form Start -->
+                <form action="">
+                  <div class="a_gn_info_discription_input_div">
+                    <label for="basic_instruction_title"
+                      >Basic Instruction</label
+                    >
+                    <input type="text" id="basic_instruction_title" />
+                  </div>
+                  <div class="basic_instruction_input_div">
+                    <label for="a_gn_info_title">A. General Information</label>
+                    <input type="text" id="a_gn_info_title" />
+                  </div>
+                  <div class="a_gn_info_discription_div">
+                    <label for="a_gn_info_discription"
+                      >General Information Discription</label
+                    >
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="basic_instruction_input_div">
+                    <label for="b_gn_info_title">B. General Information</label>
+                    <input type="text" id="b_gn_info_title" />
+                  </div>
+                  <div class="b_gn_info_discription_div">
+                    <label for="b_gn_info_discription"
+                      >General Information Discription</label
+                    >
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </div>
+                </form>
+              </div>
+              <!-- Exam Basic Instruction Form End -->
+
+              <div class="rules_form_outer_div">
+                <!-- Exam Rules Form End -->
+                <form action="">
+                  <div class="rules_input_div">
+                    <label for="rules_title">Rules</label>
+                    <input type="text" id="guideline_title" />
+                  </div>
+                  <div class="guideline_discription_div">
+                    <label for="rules_discription">Rules Discription</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </div>
+                </form>
+              </div>
+              <!-- Exam Rules Form End -->
+
+              <div class="extra_attempt_form_outer_div">
+                <!-- Exam Rules Form End -->
+                <form action="">
+                  <div class="extra_attempt_input_div">
+                    <label for="extra_attempt_title">Extra Attempt</label>
+                    <input type="text" id="extra_attempt_title" />
+                    <!-- <button>Edit</button> -->
+                  </div>
+                  <div class="extra_attempt_discription_div">
+                    <label for="extra_attempt_discription"
+                      >Extra Attempt Discription</label
+                    >
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </div>
+                </form>
+              </div>
+              <!-- Exam Rules Form End -->
+            </div>
+            <!-- exam Contents Div Html End -->
+            <div class="exam_footer_div">
+              <div class="next_button_div exam_title_btn">
+                <button>next</button>
+              </div>
+              <div class="next_button_div guideline_btn">
+                <button id="guideline_previous_btn">previous</button>
+                <button id="guideline_next_btn">next</button>
+              </div>
+              <div class="next_button_div instruction_btn">
+                <button id="instruction_previous_btn">previous</button>
+                <button id="instruction_next_btn">next</button>
+              </div>
+              <div class="next_button_div rules_btn">
+                <button id="rules_previous_btn">previous</button>
+                <button id="rules_next_btn">next</button>
+              </div>
+              <div class="next_button_div attempts_btn">
+                <button id="attempts_previous_btn">previous</button>
+                <button>Create Exam</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Examination Content Html End -->
+          <!-- view exam Contents Div Html start -->
+          <div class="view_exam_outer_div">
+            <div class="view_exam_header">
+              <div class="total_exam">
+                <h3>Exam Available : 11</h3>
+              </div>
+              <div class="header_actions">
+                <div class="exam_search_div" id="std_search_btn">
+                  <span id="exam_search_btn"
+                    ><i class="fad fa-search window_hide"></i
+                  ></span>
+                  <div class="dropdown_search" id="exam_search_dropdown">
+                    <input type="search" />
+                  </div>
+                </div>
+                <div class="exam_filter">
+                  <span>Filter <i class="fad fa-sort-alt"></i></span>
+                  <div class="filter_div_std" id="exam_filter">
+                    <ul>
+                      <li><a href="#">Show 10</a></li>
+                      <li><a href="#">Show 15</a></li>
+                      <li><a href="#">Show 20</a></li>
+                      <li><a href="#">Show 25</a></li>
+                      <li><a href="#">Show 30</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="exam_add_div">
+                  <span><i class="fad fa-plus-circle"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="view_exam_table_div">
+              <div>
+                <table>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Date</th>
+                    <th>Students Attempting</th>
+                    <th>Actions</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Term 2nd</td>
+                    <td>515537</td>
+                    <td>24/11/2021</td>
+                    <td>30</td>
+                    <td class="table_action">
+                      <span><i class="fad fa-eye"></i></span
+                      ><span><i class="fad fa-edit"></i></span
+                      ><span><i class="fad fa-trash-alt"></i></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Term 2nd</td>
+                    <td>515537</td>
+                    <td>24/11/2021</td>
+                    <td>30</td>
+                    <td class="table_action">
+                      <span><i class="fad fa-eye"></i></span
+                      ><span><i class="fad fa-edit"></i></span
+                      ><span><i class="fad fa-trash-alt"></i></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Term 2nd</td>
+                    <td>515537</td>
+                    <td>24/11/2021</td>
+                    <td>30</td>
+                    <td class="table_action">
+                      <span><i class="fad fa-eye"></i></span
+                      ><span><i class="fad fa-edit"></i></span
+                      ><span><i class="fad fa-trash-alt"></i></span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="view_exam_footer"></div>
+          </div>
+
+          <!-- view Exam Content Html End -->
+
+          <div class="result_inner_div"><!--Result Html Start  --></div>
+          <!--Result Html End  -->
+
+          <div class="profile_inner_div">
+            <!--Priofile Html Start  -->
+            <div class="profile_tabs_div">
+              <div class="your_profile">Your Profile</div>
+              <div class="change_password">Change Password</div>
+            </div>
+            <div class="your_profile_content">
+              <div class="admin_profile">
+                <label for="">Full Name :</label>
+                <input type="text" value="Bhat Hanan" disabled />
+                <button>Edit</button>
+              </div>
+              <div class="admin_profile">
+                <label for="">E-mail :</label>
+                <input type="text" value="bhathanan987898@gmail.com" disabled />
+                <button>Edit</button>
+              </div>
+              <div class="admin_profile">
+                <label for="">Username :</label>
+                <input type="text" value="bhathanan9906" disabled />
+                <button>Edit</button>
+              </div>
+              <div class="admin_profile save_div">
+                <button id="save_btn">Save</button>
+              </div>
+            </div>
+            <div class="password_content">
+              <div class="change_password_div">
+                <label for="">Current Password :</label>
+                <input type="text" />
+              </div>
+              <div class="change_password_div">
+                <label for="">New Password :</label>
+                <input type="text" />
+              </div>
+              <div class="change_password_div">
+                <label for="">Confirm Password :</label>
+                <input type="text" />
+              </div>
+              <div class="change_password_div save_div">
+                <button id="save_btn">Save</button>
+              </div>
+            </div>
+          </div>
+          <!--Priofile Html End  -->
+        </div>
+        <!-- Dashboard content Div Close-->
+        <!-- Middle Div End -->
+
+        <!-- footer Html -->
+        <footer>
+          <div class="bashboard_footer">
+            <p>Copyright 2021</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+    <!-- https://www.jotform.com/build/212923174471454#preview -->
+  </body>
+</html>

@@ -3,6 +3,8 @@
 @import "examstyle.css";
 @import "viewexam.css";
 @import "profilestyle.css";
+@import "result.css";
+@import "viewresult.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -571,6 +573,24 @@ input[type = submit]:hover, input[type = reset]:hover {
     font-size: 13px;
 }
 
+button {
+    background-color: var(--color);
+    padding: 8px 15px;
+    color: #fff;
+    text-transform: capitalize;
+    border: none;
+    margin-left: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--background);
+}
+
+.profile_list {
+    display: none;
+}
 
 @media only screen and (max-width: 990px) {
 
@@ -603,7 +623,7 @@ input[type = submit]:hover, input[type = reset]:hover {
     }
 
     .profile_list {
-        display: none;
+        display: inherit;
     }
 
     .logo_outer_div .fa-bars {
